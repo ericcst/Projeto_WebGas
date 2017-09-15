@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<HTML lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<title> Web Gás</title>
+    <link rel="stylesheet" type="text/css" href="_css/index.css">
+    <link rel="shortcut icon" href="_imagens/logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="_css/normalize.css">
+    <link rel="stylesheet" href="_css/gallery.prefixed.css">
+    <link rel="stylesheet" href="_css/gallery.theme.css">
+    <style type="text/css">
+    @import url("_css/rodape.css");
+    </style>
+</head>
+
+<BODY topmargin=0 leftmargin=0 bottommargin=0 rightmargin=0>
+
+    <a href="INDEX.html" ><img src="_imagens\web-logo.png" width="300px" height="80px" align="left" id="logo" ></a>
+    
+    <p><label id="cLoginLabel">Login:</label> <INPUT id="cLogin" TYPE="text" value="Usuário, E-mail ou CPF"  onblur = "if (this.value == '') {this.value = 'Usuário, E-mail ou CPF'}"  onfocus = "if (this.value == 'Usuário, E-mail ou CPF') {this.value = ''} " ></p>
+<p><INPUT id="cPesquisar" TYPE="text" value="Pesquisar" size="50" onblur = "if (this.value == '') {this.value = 'Pesquisar'}"  onfocus = "if (this.value == 'Pesquisar') {this.value = ''} ">
+    <input id="cPesquisarLabel" type="submit" value="Pesquisar">
+<label id="cSenhaLabel">Senha:</label> <INPUT id="cSenha" TYPE="password" value="password" onblur = "if (this.value == '') {this.value = 'password'}"  onfocus = "if (this.value == 'password') {this.value = ''} "></p>
+    
+    <p><h6 id="Esqueci">Esqueceu minha senha<h6></p>
+
+<input type="submit" id="BtCriar" value="Criar Conta" onClick="location.href='cadCliente.html'">
+    
+<input type="submit" value="Entrar" id="BtUsuario" onClick="location.href=''">
+<br/>
+    <br/>
+<nav id="menu" ALIGN="center" >
+        <ul>
+            <li><a href="INDEX.html" >WEB GÁS</a></li>    
+            <li><a href="nossos-produtos.html">Nossos Produtos</a></li>
+            <li><a href="">Nossa Empresa</a></li>
+            <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+        </ul>
+    </nav>
+
+            <div class="gallery autoplay items-4">
+                <div id="item-1" class="control-operator"></div>
+                <div id="item-2" class="control-operator"></div>
+                <div id="item-3" class="control-operator"></div>
+                <div id="item-4" class="control-operator"></div>
+
+                <figure class="item">
+                    <img src="_imagens/letreiro.jpg" alt="Imagem1">
+                </figure>
+
+                <figure class="item">
+                    <h1>Item 2</h1>
+                </figure>
+
+                <figure class="item">
+                    <h1>Item 3</h1>
+                </figure>
+
+                <figure class="item">
+                    <h1>Item 4</h1>
+                </figure>
+
+                <div class="controls">
+                    <a href="#item-1" class="control-button">•</a>
+                    <a href="#item-2" class="control-button">•</a>
+                    <a href="#item-3" class="control-button">•</a>
+                    <a href="#item-4" class="control-button">•</a>
+                </div>
+            </div>
+
+<br>
+
+<footer id="rodape">
+	<table align="center" id="tbRodape">
+		<tr>
+		<td>Web Gás &nbsp </td>
+		<td>Contato &nbsp </td>
+		<td>Pagamento &nbsp </td>
+		</tr>
+		
+		<tr>
+		<td><a href="index.html">Página Inicial</a></td>
+		<td>webgas@gmail.com &nbsp &nbsp </td>
+		<td>
+		<img src="_imagens/bandeira-visa.jpg" height="20px" width="30px"/>
+		<img src="_imagens/bandeira-mastercard.jpg" height="20px" width="30px"/>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><a href="nossos-produtos.html">Nossos Produtos</a></td>
+		<td>(21) 3365-9654</td>
+		<td>
+			<img src="_imagens/bandeira-elo.png" height="20px" width="30px"/>
+			<img src="_imagens/boleto.jpg" height="20px" width="30px"/>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><a href="">Nossa Empresa</a></td>
+		</tr>
+		
+		<tr>
+		<td><a href="fale-conosco.html">Fale Conosco</a></td>
+		</tr>
+		
+		<tr>
+		<td><a href="trabalhe-conosco.html">Trabalhe Conosco</a></td>
+		</tr>
+		
+	</table>
+	
+	<br>
+	
+<p>CNPJ: 1385.93943.940324-534<br>
+Endereço: Rua Crezo, n°16 – Curicica – Rio de Janeiro, RJ</p>
+</footer>
+</BODY>
+</HTML>

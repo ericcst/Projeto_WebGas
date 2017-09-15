@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro do Funcionário - Brito Gás</title>
+	<link rel="stylesheet" type="text/css" href="_css/cadFuncionario.css"/>
+	<link rel="stylesheet" type="text/css" href="_css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="_css/rodape.css"/>
+	<link rel="shortcut icon" href="_imagens/logo.png" type="image/x-icon"/>
+	
+	<script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+}
+	</script>
+
+</head>
+<body>
+	
+<a href="INDEX.html"><img src="_imagens\web-logo.png" width="300px" height="80px" align="left" id="logo"/></a>
+
+<p><label id="cLoginLabel">Login:</label> <INPUT id="cLogin" TYPE="text" value="Usuário, E-mail ou CPF"  onblur = "if (this.value == '') {this.value = 'Usuário, E-mail ou CPF'}" onfocus = "if (this.value == 'Usuário, E-mail ou CPF') {this.value = ''}"/></p>
+
+<p><INPUT id="cPesquisar" TYPE="text" value="Pesquisar" size="50" onblur = "if (this.value == '') {this.value = 'Pesquisar'}" onfocus = "if (this.value == 'Pesquisar') {this.value = ''} "/>
+
+<input id="cPesquisarLabel" type="submit" value="Pesquisa">
+
+<label id="cSenhaLabel">Senha:</label> <INPUT id="cSenha" TYPE="password" value="password" onblur = "if (this.value == '') {this.value = 'password'}" onfocus = "if (this.value == 'password') {this.value = ''} "></p>
+
+<p><h6 id="Esqueci">Esqueceu minha senha<h6></p>
+
+<input type="submit" id="BtCriar" value="Criar Conta" onClick="location.href='cadCliente.html'">
+<input type="submit" value="Entrar" id="BtUsuario"/>
+    <br/>
+    <br/>
+<nav id="menu" ALIGN="center" >
+    <ul>
+        <li><a href="INDEX.html" >WEB GÁS</a></li>    
+        <li><a href="">Nossos Produtos</a></li>
+        <li><a href="">Nossa Empresa</a></li>
+        <li><a href="fale-conosco.html">Fale Conosco</a></li>
+        <li><a href="">Trabalhe Conosco</a></li>
+    </ul>
+</nav>
+
+</br>
+
+<form method="post" id="cadFuncionario" action="mailto: britogas@britogas.com.br">
+	<fieldset id="usuario"><legend>Dados Pessoais</legend>
+		<p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="40" maxlength="40" placeholder="Nome Completo"></p>
+
+		<p><label for="cCpf">CPF:</label> <input type="text" name="tCpf" id="cCpf" size="20" maxlength="14" onkeypress="formatar('###.###.###-##', this)" placeholder="Informe seu CPF"></p>
+	
+		<p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="40" maxlength="80" placeholder="Informe sua senha"></p>
+	
+		<p><label for="cCoSenha">Confirmar Senha:</label> <input type="password" name="tCoSenha" id="cCoSenha" size="30" maxlength="80" placeholder="Confirme sua senha"></p>
+
+
+		<p><label for="cEmail">E-mail:</label> <input type="E-mail" name="tEmail" id="cEmail" size="30" maxlength="40" placeholder="Digite seu E-mail"></p>
+
+			<fieldset id="sexo"><legend>Sexo</legend>
+				<input type="radio" name="tSexo" id="cMasc"/><label for="cMasc">Masculino</label>
+				<input type="radio" name="tSexo" id="cFen"/><label for="cFen">Feminino</label>
+			</fieldset>
+	
+		<p><label for="cNasc">Data de Nacimento</label> <input type="date" name="tNasc" id="cNasc"></p>
+
+			<fieldset id="cnh"><legend>CNH</legend>
+				Categoria:<br/>
+				<input type="checkbox" name="tA" id="cA"><label for="cA">A</label>&nbsp &nbsp
+				<input type="checkbox" name="tB" id="cB"><label for="cB">B</label>&nbsp &nbsp
+				<input type="checkbox" name="tC" id="cC"><label for="cC">C</label>&nbsp &nbsp
+				<input type="checkbox" name="tD" id="cD"><label for="cD">D</label>&nbsp &nbsp
+				<input type="checkbox" name="tE" id="cE"><label for="cE">E</label>
+				<p><label for="cReg">Nº Registro</label> <input type="number" name="tReg" id="cReg" size="10" placeholder="Número de Registro"></p>
+				<p><label for="cVal">Validade:</label> <input type="date" name="tVal" id="cVal"></p>
+			</fieldset>
+	
+	</fieldset>
+	
+	<br/>
+
+	<fieldset id="endereco"><legend>Endereço do Usuário</legend>
+		
+		<p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="30" maxlength="80" placeholder="Rua, Av, Trv, Estr..."></p>
+
+		<p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="1" max="99999"></p>
+
+		<p><label for="cCep">CEP:</label> <input type="text" name="tCep" id="cCep" size="30" maxlength="9" onkeypress="formatar('#####-###', this)" placeholder="Informe seu CEP"></p>
+
+		<p><label for="cCompl">Complemento:</label> <input type="text" name="tCompl" id="cCompl" size="27" maxlength="40" placeholder="Informe o Complemento"></p>
+
+		<p><label for="cEst">Estado</label> <select name="tEst" id="cEst">
+			<optgroup label="Região Sudeste">
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="SP">São Paulo</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="SC">Espírito Santo</option>
+			</optgroup>
+
+			<optgroup label="Região Sul">
+				<option value="PR">Paraná</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="RS">Rio Grande do Sul</option>
+			</optgroup>
+
+			<optgroup label="Região Centro-Oeste">
+				<option value="DF">Distrito Federal</option>
+				<option value="GO">Goiás</option>
+				<option value="MT">Mato Grosso</option>
+				<option value="MS">Mato Grosso do Sul</option>
+			</optgroup>
+
+			<optgroup label="Região Norte">
+				<option value="AC">Acre</option>
+				<option value="AP">Amapá</option>
+				<option value="AM">Amazonas</option>
+				<option value="PA">Pará</option>
+				<option value="RO">Rondônia</option>
+				<option value="RR">Roraima</option>
+				<option value="TO">Tocantins</option>
+			</optgroup>
+
+			<optgroup label="Região Nordeste">
+				<option value="AL">Alagoas</option>
+				<option value="BA">Bahia</option>
+				<option value="CE">Ceará</option>
+				<option value="MA">Maranhão</option>
+				<option value="PB">Paraíba</option>
+				<option value="PE">Pernambuco</option>
+				<option value="PI">Piauí</option>
+				<option value="RN">Rio Grande do Norte</option>
+				<option value="SE">Sergipe</option>
+			</optgroup>
+		</select></p>
+
+		<p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" size="30" maxlength="40" placeholder=" Informe sua cidade" list="cidades"></p>
+			<datalist id=cidades>
+				<option value="Rio de Janeiro">Rio de Janeiro</option>
+				<option value="Nova Iguaçu">Nova Iguaçu</option>
+				<option value="Niteroi">Niteroi</option>
+				<option value="Belford Roxo">Belford Roxo</option>
+			</datalist>
+	</fieldset>
+
+	<br/>
+
+	<fieldset id="contato"><legend>Tipos de Contato</legend>
+		<p><label for="cTres">Telefone Residencial:</label> <input type="text" name="tTres" id="cTres" size="25" maxlength="9" onkeypress="formatar('####-####', this)" placeholder="Informe Seu Telefone Residencial"></p>
+
+		<p><label for="cTcom">Telefone Comercial:</label> <input type="text" name="tTcom" id="cTcom" size="25" maxlength="10" onkeypress="formatar('#####-####', this)" placeholder="Informe Seu Telefone Comercial"></p>
+
+		<p><label for="cTcel">Telefone Celular:</label> <input type="text" name="tTcel" id="cTcel" size="25" maxlength="10" onkeypress="formatar('#####-####', this)" placeholder="Informe Seu Telefone Celular"></p>
+	</fieldset>
+
+	<br/>
+
+	<fieldset id="atuacao"><legend>Área de Atuação</legend>
+		<p><label for="cSetor">Setor:</label> <input type="text" name="tSetor" id="cSetor" size="20" maxlength="40" placeholder="Setor do funcionário"></p>
+		<p><label for="cCargo">Cargo:</label> <input type="text" name="tCargo" id="cCargo" size="20" maxlength="40" placeholder="Cargo do funcionário"></p>
+		<p><label for="cAdm">Data de Admissão:</label> <input type="date" name="tAdm" id="cAdm"></p>
+		<p><label for="cDesl">Data de Desligamento:</label> <input type="date" name="tDesl" id="cDesl"></p>
+	</fieldset>
+
+	<br>
+
+	<input type="image" name="tCadastrar" id="btCadastrar" src="_imagens/bt-cadastrar.png">&nbsp &nbsp &nbsp
+	<input type="image" name="tCancelar" id="btCancelar" src="_imagens/bt-cancelar.png">
+
+</form>
+
+<footer id="rodape">
+	<table align="center" id="tbRodape">
+		<tr>
+		<td>Web Gás &nbsp </td>
+		<td>Contato &nbsp </td>
+		<td>Pagamento &nbsp </td>
+		</tr>
+		
+		<tr>
+		<td><a href="index.html">Página Inicial</a></td>
+		<td>webgas@gmail.com &nbsp &nbsp </td>
+		<td>
+		<img src="_imagens/bandeira-visa.jpg" height="20px" width="30px"/>
+		<img src="_imagens/bandeira-mastercard.jpg" height="20px" width="30px"/>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><a href="nossos-produtos.html">Nossos Produtos</a></td>
+		<td>(21) 3365-9654</td>
+		<td>
+			<img src="_imagens/bandeira-elo.png" height="20px" width="30px"/>
+			<img src="_imagens/boleto.jpg" height="20px" width="30px"/>
+		</td>
+		</tr>
+		
+		<tr>
+		<td><a href="">Nossa Empresa</a></td>
+		</tr>
+		
+		<tr>
+		<td><a href="fale-conosco.html">Fale Conosco</a></td>
+		</tr>
+		
+		<tr>
+		<td><a href="trabalhe-conosco.html">Trabalhe Conosco</a></td>
+		</tr>
+		
+	</table>
+	
+	<br>
+	
+<p>CNPJ: 1385.93943.940324-534<br>
+Endereço: Rua Crezo, n°16 – Curicica – Rio de Janeiro, RJ</p>
+	
+</footer>
+
+</body>
+</html>

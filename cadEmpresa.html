@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro de Empresa/Filial</title>
+	<link rel="stylesheet" type="text/css" href="_css/cadEmpresa.css">
+	<link rel="shortcut icon" href="_imagens/logo2.png" type="image/x-icon"/>
+	<style type="text/css">
+	@import url("_css/index.css");
+    </style>
+	<script type="text/javascript">
+	
+	function formatar(mascara, documento){
+  	var i = documento.value.length;
+  	var saida = mascara.substring(0,1);
+  	var texto = mascara.substring(i)
+  
+  	if (texto.substring(0,1) != saida){
+        documento.value += texto.substring(0,1);
+  }
+  
+}
+	
+	</script>
+
+</head>
+<BODY topmargin=0 leftmargin=0 bottommargin=0 rightmargin=0>
+
+    <a href="INDEX.html" ><img src="_imagens\web-logo.png" width="300px" height="80px" align="left" id="logo" ></a>
+    
+    <p><label id="cLoginLabel">Login:</label> <INPUT id="cLogin" TYPE="text" value="Usuário, E-mail ou CPF"  onblur = "if (this.value == '') {this.value = 'Usuário, E-mail ou CPF'}"  onfocus = "if (this.value == 'Usuário, E-mail ou CPF') {this.value = ''} " ></p>
+<p><INPUT id="cPesquisar" TYPE="text" value="Pesquisar" size="50" onblur = "if (this.value == '') {this.value = 'Pesquisar'}"  onfocus = "if (this.value == 'Pesquisar') {this.value = ''} ">
+    <input id="cPesquisarLabel" type="submit" value="Pesquisar">
+<label id="cSenhaLabel">Senha:</label> <INPUT id="cSenha" TYPE="password" value="password" onblur = "if (this.value == '') {this.value = 'password'}"  onfocus = "if (this.value == 'password') {this.value = ''} "></p>
+    
+    <p><h6 id="Esqueci">Esqueceu minha senha<h6></p>
+
+    <input type="submit" id="BtCriar" value="Criar Conta" onClick="location.href='cadCliente.html'">
+    
+       <input type="submit" value="Entrar" id="BtUsuario" onClick="location.href=''">
+    <br/>
+    <br/>
+<nav id="menu" ALIGN="center" >
+        <ul>
+            <li><a href="INDEX.html" >WEB GÁS</a></li>    
+            <li><a href="">Nossos Produtos</a></li>
+            <li><a href="">Nossa Empresa</a></li>
+            <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+        </ul>
+</nav>
+
+	<form method="post" id="cadEmpresa">
+		<fieldset id="empresa"><legend>Dados da Empresa/Filial</legend>
+
+				<fieldset id="tipoEmpresa"><legend>Tipo de Empresa</legend>
+					<input type="radio" name="tTipEmp" id="cLoja"/><label for="cLoja">Loja</label>
+					<input type="radio" name="tTipEmp" id="cMatriz"/><label for="cMatriz">Matriz</label>
+					<input type="radio" name="tTipEmp" id="cEscrit"/><label for="cEscrit">Escritório</label>
+				</fieldset>
+
+			<p><label for="cCNPJ">CNPJ:</label> <input type="text" name="tCNPJ" id="cCNPJ" size="25" maxlength="18" onkeypress="formatar('##.###.###/####-##', this)" placeholder="Informe o CNPJ" required/>*</p>
+
+			<p><label for="cRsocial">Razão Social:</label> <input type="text" name="tRsocial" id="cRsocial" size="17" maxlength="50" placeholder="Informe a Razão Social" required/>*</p>
+
+			<p><label for="cNfantasia">Nome de Fantasia:</label> <input type="text" name="tNfantasia" id="cNfantasia" size="20" maxlength="50" placeholder="Informe o nome de fantasia" required/>*</p>
+
+			<p><label for="cRepre">Representante:</label> <input type="text" name="tRepre" id="cRepre" size="24" maxlength="50" placeholder="Informe o nome do representante" required/>*</p>
+
+				<fieldset id="fones"><legend>Contatos</legend>
+					<p><label for="cFone1">Telefone 1: </label> <input type="text" name="tFone1" id="cFone1" size="13" maxlength="9" onkeypress="formatar('####-####', this)" placeholder="Infome o Telefone"/> </p>
+
+					<p><label for="cFone2">Telefone 2: </label> <input type="text" name="tFone2" id="cFone2" size="13" maxlength="9" onkeypress="formatar('####-####', this)" placeholder="Infome o Telefone"/> </p>
+
+					<p><label for="cFone3">Telefone 3: </label> <input type="text" name="tFone3" id="cFone3" size="13" maxlength="9" onkeypress="formatar('####-####', this)" placeholder="Infome o Telefone"/> </p>
+				</fieldset>
+
+			<p><label for="cCep">CEP:</label> <input type="text" name="tCep" id="cCep" size="30" maxlength="9" onkeypress="formatar('#####-###', this)" placeholder="Informe seu CEP" required/>*</p>
+
+			<p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="23" maxlength="80" placeholder="Rua, Av, Trv, Estr..." required/>*</p>
+
+			<p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="1" max="99999" required/>*</p>
+
+			<p><label for="cBairro">Bairro:</label> <input type="text" name="tBairro" id="cBairro" size="28" maxlength="50" placeholder="Infome o Bairro" required/>*</p>
+
+			<p><label for="cCompl">Complemento:</label> <input type="text" name="tCompl" id="cCompl" size="21" maxlength="40" placeholder="Informe o Complemento" required/></p>
+
+					<p><label for="cEst">Estado</label> <select name="tEst" id="cEst">
+			<optgroup label="Região Sudeste">
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="SP">São Paulo</option>
+				<option value="MG">Minas Gerais</option>
+				<option value="SC">Espírito Santo</option>
+			</optgroup>
+
+			<optgroup label="Região Sul">
+				<option value="PR">Paraná</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="RS">Rio Grande do Sul</option>
+			</optgroup>
+
+			<optgroup label="Região Centro-Oeste">
+				<option value="DF">Distrito Federal</option>
+				<option value="GO">Goiás</option>
+				<option value="MT">Mato Grosso</option>
+				<option value="MS">Mato Grosso do Sul</option>
+			</optgroup>
+
+			<optgroup label="Região Norte">
+				<option value="AC">Acre</option>
+				<option value="AP">Amapá</option>
+				<option value="AM">Amazonas</option>
+				<option value="PA">Pará</option>
+				<option value="RO">Rondônia</option>
+				<option value="RR">Roraima</option>
+				<option value="TO">Tocantins</option>
+			</optgroup>
+
+			<optgroup label="Região Nordeste">
+				<option value="AL">Alagoas</option>
+				<option value="BA">Bahia</option>
+				<option value="CE">Ceará</option>
+				<option value="MA">Maranhão</option>
+				<option value="PB">Paraíba</option>
+				<option value="PE">Pernambuco</option>
+				<option value="PI">Piauí</option>
+				<option value="RN">Rio Grande do Norte</option>
+				<option value="SE">Sergipe</option>
+			</optgroup>
+		</select></p>
+
+		<p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" size="30" maxlength="40" placeholder=" Informe sua cidade" list="cidades" required/>*</p>
+			<datalist id="cidades">
+				<option value="Rio de Janeiro"></option>
+				<option value="Nova Iguaçu"></option>
+				<option value="Niteroi"></option>
+				<option value="Belford Roxo"></option>
+		</fieldset>
+			
+		<br/>
+
+			<input type="image" name="tCadastrar" id="btCadastrar" src="_imagens/bt-cadastrar.png"/>&nbsp &nbsp &nbsp
+			<input type="image" name="tCancelar" id="btCancelar" src="_imagens/bt-cancelar.png"/>
+
+	</form>
+
+	<footer id="rodape">
+		<p>CNPJ: &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp E-mail: britogas@britogas.com.br<br/>
+		Endereço: Rua Crezo, n°16 – Curicica – Rio de Janeiro, RJ</p>
+	</footer>
+
+</body>
+</html>

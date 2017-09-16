@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+body{
+	font-family: 'Muli', sans-serif;
+}
+
+h3{
+	font-size: 13pt;
+}
+
+p{
+	text-align: justify;
+}

@@ -1,0 +1,52 @@
+@charset = "UTF-8"
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+form{
+	width: 500px;
+	margin: auto;
+}
+
+input {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+}
+
+input:hover{
+	background-color: #dddddd;
+}
+
+legend{
+	color: 888888;
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: sans-serif;
+}
+
+fieldset{
+	border-color: #cecece;
+	margin: 15px;
+}
+
+fieldset#info{
+	background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%; 
+}
+
+input#btEnviar{
+	cursor: pointer;
+	border-radius: 5px;
+
+}
+
+#cRodape {
+	background-position: 1260px;
+	position: absolute;
+	width:100%;
+}
+
+
+#cMenuRodape {
+	margin-left:-32px;
+	font-size:12px;
+	font-style:normal;
+}

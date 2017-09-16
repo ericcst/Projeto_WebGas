@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+body{
+	font-family: 'Muli', sans-serif;
+	font-size: 11pt;
+}
+
+* {
+	font-color: red;
+}
+
+form{
+	width: 500px;
+	margin: auto;
+}
+
+input {
+	font-weight: normal;
+	font-size: 10pt;
+}
+
+input:hover{
+	background-color: #dddddd;
+}
+
+legend{
+	color: 888888;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+fieldset{
+	border-color: #cecece;
+	margin: 15px;
+}
+
+fieldset#sexo {
+	width: 180px;
+}
+
+input#btCad{
+	cursor: pointer;
+	border-radius: 5px;
+
+}
+
+input#btCan{
+	cursor: pointer;
+	border-radius: 5px;
+
+}
+
+footer#rodape{
+	clear: both;
+	margin-top: 30px;
+	border-top: 1px solid #000000;
+}
+
+footer#rodape p{
+	text-align: center;
+}
+
+fieldset#usuario{
+	background: url("../_imagens/icone-usuario.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco{
+	background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+
+fieldset#contato{
+	background: url("../_imagens/icone-telefone.png") no-repeat 95% 95%;
+}

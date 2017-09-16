@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+body{
+	font-family: 'Muli', sans-serif;
+	font-size: 11pt;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+#cRodape {
+	border-bottom: 4px solid #666;
+	background-color: #06C;
+	background-position: 1260px;
+	position:absolute;
+	width:100%;
+}
+
+#cMenuRodape {
+	margin-left:-32px;
+	font-size:12px;
+	font-style:normal;	
+}
+
+a:link, a:visited {
+    text-decoration: none;
+	color:#000;
+}
+
+a:hover {
+    text-decoration: underline;
+	color: #fff;
+}
+
+a:active {
+	text-decoration: none;
+	color:#F00;
+}
